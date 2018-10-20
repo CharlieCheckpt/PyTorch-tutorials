@@ -10,6 +10,8 @@ class TwoLayerNet(torch.nn.Module):
         self.linear1 = torch.nn.Linear(D_in, H)
         self.linear2 = torch.nn.Linear(H, D_out)
 
+    # seems like only a forward function is needed in the nn module
+    # activations are in the forward function.
     def forward(self, x):
         h_relu = self.linear1(x).clamp(min=0)
         y_pred = self.linear2(h_relu)

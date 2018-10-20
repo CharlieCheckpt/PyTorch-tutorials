@@ -30,7 +30,7 @@ def main():
         loss = (y_pred - y).pow(2).sum().item()
         print(t, loss)
 
-        # Backprogation
+        # Backpropagation
         grad_y_pred = 2.0 * (y_pred - y)
         grad_w2 = h_relu.t().mm(grad_y_pred)
         grad_h_relu = grad_y_pred.mm(w2.t())

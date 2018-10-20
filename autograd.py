@@ -34,7 +34,7 @@ def main():
         # computes the gradient of loss w.r.t all tensors with requires_grad=True
         # after this call, w1.grad and w2.grad will be tensors holding the gradient of the loss
         loss.backward()
-e
+
         # Manually update weights using gradient descent
         # You can also use torch.optim.SGD to achieve this.
         with torch.no_grad():
